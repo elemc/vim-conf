@@ -4,6 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+set nocompatible
+set backspace=indent,eol,start
 filetype on
 filetype plugin on
 set nocp
@@ -43,7 +45,6 @@ if has ("unix")
         map <C-F12> :!/usr/local/bin/ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
         au BufWritePost *.c,*.cpp,*.h silent! !/usr/local/bin/ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q . &
     else
-        behave mswin
         map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
         au BufWritePost *.c,*.cpp,*.h silent! !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q . &
  
@@ -59,6 +60,7 @@ endif
 if has ("gui_running")
     if has ("gui_gtk2")
         set guifont=Monaco\ 10
+        behave mswin
     endif
     if has("gui_macvim")
         let macvim_hig_shift_movement = 1
@@ -80,4 +82,5 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Folding
 set foldmethod=syntax
+set foldcolumn=1
 
