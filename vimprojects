@@ -1,0 +1,51 @@
+XMLer=~/workspace/code/XMLer CD=. {
+CMakeLists.txt
+config.h.in
+main.cpp
+xmler.qrc
+    src=src/{
+        xmlnodes=.{
+            attrxmlnode.cpp
+            attrxmlnode.h
+            basexmlnode.cpp
+            basexmlnode.h
+            commentxmlnode.cpp
+            commentxmlnode.h
+            dataxmlnode.cpp
+            dataxmlnode.h
+            documentxmlnode.cpp
+            documentxmlnode.h
+            elementxmlnode.cpp
+            elementxmlnode.h
+        }
+        windows=.{
+            documentpropertiesdialog.cpp
+            documentpropertiesdialog.h
+            mainwindow.cpp
+            mainwindow.h
+        }
+        thread_classes=.{
+            xmlerfileoperthread.cpp
+            xmlerfileoperthread.h
+            xmlerfindthread.cpp
+            xmlerfindthread.h
+            xmlerloadfilethread.cpp
+            xmlerloadfilethread.h
+            xmlersavefilethread.cpp
+            xmlersavefilethread.h
+        }
+        xmlerapplication.cpp
+        xmlerapplication.h
+        xmlerexception.cpp
+        xmlerexception.h
+        xmlerfindwidget.cpp
+        xmlerfindwidget.h
+        xmlerhandler.cpp
+        xmlerhandler.h
+        xmlerinputsource.cpp
+        xmlerinputsource.h
+        xmlermodel.cpp
+        xmlermodel.h
+    }
+}
+
