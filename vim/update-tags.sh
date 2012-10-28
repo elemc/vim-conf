@@ -12,8 +12,11 @@ if [ "$OS_TYPE" == "Darwin" ]; then
     QT4_INCLUDES=/Users/alex/tools/qt/4.8.3/include
 fi
 
-pushd tags
+if [ ! -d tags ]; then
+    mkdir tags
+fi
 
+pushd tags
 if [ ! -d cpp_src ]; then
     curl http://www.vim.org/scripts/download_script.php?src_id=9178 > cpp_src.tar.bz2
     tar xfv cpp_src.tar.bz2
