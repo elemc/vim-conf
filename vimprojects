@@ -1,4 +1,5 @@
 XMLer=~/workspace/code/XMLer CD=. {
+README.md
 CMakeLists.txt
 config.h.in
 main.cpp
@@ -46,6 +47,12 @@ xmler.qrc
         xmlerinputsource.h
         xmlermodel.cpp
         xmlermodel.h
+    }
+    tools=tools/{
+        XMLer.desktop.in
+        XMLer.spec
+        make-source-archive
+        copy-image.sh
     }
 }
 
