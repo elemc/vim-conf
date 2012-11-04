@@ -88,3 +88,4 @@ set foldcolumn=1
 " SPEC
 let spec_chglog_prepend = 1
 au FileType spec map <buffer> <F5> <Plug>AddChangelogEntry
+let spec_chglog_packager = 'Alexei Panov <me AT elemc DOT name>'
