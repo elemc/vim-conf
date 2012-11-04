@@ -55,4 +55,11 @@ xmler.qrc
         copy-image.sh
     }
 }
-
+docs=~/workspace/code/docs CD=. {
+    docs=docs/{
+        settings.py
+    }
+    common=common/{
+        models.py
+    }
+}
