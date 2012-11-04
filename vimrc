@@ -50,8 +50,7 @@ if has ("unix")
  
         " maps for alt+c/v/x
         nmap <m-v> "+gp
-        " nmap <m-v> ]p
-        imap <m-v> <ESC><m-v>i
+        imap <m-v> <c-r>"
         vmap <m-c> "+y
         vmap <m-x> "+x
     endif
