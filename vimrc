@@ -47,13 +47,35 @@ if has ("unix")
     else
         map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
         au BufWritePost *.c,*.cpp,*.h silent! !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q . &
- 
-        " maps for alt+c/v/x
-        nmap <m-v> "+gp
-        " imap <m-v> <c-r>"
-        imap <m-v> <ESC><m-v>A
-        vmap <m-c> "+y
-        vmap <m-x> "+x
+
+        vnoremap <m-x> "+x
+        vnoremap <S-Del> "+x
+        " CTRL-C and CTRL-Insert are Copy
+        vnoremap <m-c> "+y
+        vnoremap <C-Insert> "+y
+
+        " CTRL-V and SHIFT-Insert are Paste
+        map <m-v>		"+gP
+        map <S-Insert>	"+gP
+
+        cmap <m-v>		<C-R>+
+        cmap <S-Insert>	<C-R>+
+
+        " Pasting blockwise and linewise selections is not possible in Insert and
+        " Visual mode without the +virtualedit feature.  They are pasted as if they
+        " were characterwise instead.
+        " Uses the paste.vim autoload script.
+
+        exe 'inoremap <script> <m-v>' paste#paste_cmd['i']
+        exe 'vnoremap <script> <m-v>' paste#paste_cmd['v']
+        imap <S-Insert>	    <m-v>
+        vmap <S-Insert>		<m-v>
+
+        " my old binds
+        " nmap <m-v> "+gp
+        " imap <m-v> <ESC><m-v>A
+        " vmap <m-c> "+y
+        " vmap <m-x> "+x
     endif
 endif
 
