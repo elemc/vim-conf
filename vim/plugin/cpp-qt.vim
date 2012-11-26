@@ -14,7 +14,7 @@ command! -nargs=* QtNewClass call s:qt_new_class(<f-args>)
 function! s:qt_new_class (classname, baseclass)
     let filename_part = tolower(a:classname)
     let s:filename_cpp = "src/" . filename_part . ".cpp"
-   let s:filename_include = filename_part . ".h"
+    let s:filename_include = filename_part . ".h"
     let s:filename_h = "src/" . s:filename_include
     let s:headerclassdef = toupper(a:classname) . "_H"
 
@@ -105,7 +105,7 @@ endfunction
 
 function! s:qt_cpp_content ()
     call append (0, s:qt_header_comment("source"))
-    call append (line('$'), s:qt_append_include ( s:filename_h, "local"))
+    call append (line('$'), s:qt_append_include ( s:filename_include, "local"))
     call append (line('$'), "")
     call append (line('$'), s:qt_cpp_constructor())
     call append (line('$'), s:qt_cpp_destructor())

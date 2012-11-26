@@ -75,5 +75,7 @@ receiptspool=~/workspace/code/receiptspool CD=. {
         clientspage.h
         database.cpp
         database.h
+        mainpage.cpp
+        mainpage.h
     }
 }
