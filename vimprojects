@@ -63,3 +63,17 @@ docs=~/workspace/code/docs CD=. {
         models.py
     }
 }
+receiptspool=~/workspace/code/receiptspool CD=. {
+    CMakeLists.txt
+    main.cpp
+    config.h.in
+    receiptspool.qrc
+    sources=src/{
+        mainwindow.cpp
+        mainwindow.h
+        clientspage.cpp
+        clientspage.h
+        database.cpp
+        database.h
+    }
+}
