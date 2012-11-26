@@ -6,6 +6,7 @@ let s:classname = ""
 let s:baseclass = ""
 let s:filename_cpp = ""
 let s:filename_h = ""
+let s:filename_include = ""
 let s:headerclassdef = ""
 
 command! -nargs=* QtNewClass call s:qt_new_class(<f-args>)
@@ -13,7 +14,8 @@ command! -nargs=* QtNewClass call s:qt_new_class(<f-args>)
 function! s:qt_new_class (classname, baseclass)
     let filename_part = tolower(a:classname)
     let s:filename_cpp = "src/" . filename_part . ".cpp"
-    let s:filename_h = "src/" . filename_part . ".h"
+   let s:filename_include = filename_part . ".h"
+    let s:filename_h = "src/" . s:filename_include
     let s:headerclassdef = toupper(a:classname) . "_H"
 
     let s:classname = a:classname
