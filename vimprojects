@@ -68,6 +68,7 @@ receiptspool=~/workspace/code/receiptspool CD=. {
     main.cpp
     config.h.in
     receiptspool.qrc
+    template.html
     sources=src/{
         mainwindow.cpp
         mainwindow.h
