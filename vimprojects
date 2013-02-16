@@ -82,3 +82,17 @@ receiptspool=~/workspace/code/receiptspool CD=. {
         editwidget.h
     }
 }
+new-basketpwd=~/workspace/code/new-basketpwd CD=. {
+    CMakeLists.txt
+    main.cpp
+    config.h.in
+    basketpwd.qrc
+    sources=src/{
+        crypt=crypt/{
+            basecryptinterface.cpp
+            basecryptinterface.h
+            oldcrypt.cpp
+            oldcrypt.h
+        }
+    }
+}
