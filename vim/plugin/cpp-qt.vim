@@ -9,7 +9,7 @@ let s:filename_h = ""
 let s:filename_include = ""
 let s:headerclassdef = ""
 
-command! -nargs=* QtNewClass call s:qt_new_class(<f-args>)
+command! -nargs=* ElemcQtNewClass call s:qt_new_class(<f-args>)
 
 function! s:qt_new_class (classname, baseclass)
     let filename_part = tolower(a:classname)
@@ -91,9 +91,18 @@ function! s:qt_minimal_class ()
 endfunction
 
 function s:qt_header_comment (type)
+    let f_str = "/* ------------------------------------ */"
+    let mid_str = "/* C++ class ". a:type ." (" . s:baseclass . ")"
+    let space_count = len(f_str) - len(mid_str) - 2
+    
+    for i in range(1,space_count)
+        let mid_str = mid_str ." "
+    endfor
+    let mid_str = mid_str ."*/"
+
     let cmnt = ["// -*- C++ -*-",
-        \       "/* ------------------------------------ */",
-        \       "/* C++ class ". a:type ." (" . s:baseclass . ")*/",
+        \       f_str,
+        \       mid_str,
         \       "/* Author: ". g:qt_cpp_author ." */",
         \       "/* ------------------------------------ */",
         \       "",
