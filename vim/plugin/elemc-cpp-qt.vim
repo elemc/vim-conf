@@ -1,6 +1,6 @@
-if exists('g:qt_cpp_author')
+if exists('g:elemc_author')
 else
-    let g:qt_cpp_author = "Alexei Panov <me@elemc.name>"
+    let g:elemc_author = "Alexei Panov <me@elemc.name>"
 endif
 let s:classname = ""
 let s:baseclass = ""
@@ -103,7 +103,7 @@ function s:qt_header_comment (type)
     let cmnt = ["// -*- C++ -*-",
         \       f_str,
         \       mid_str,
-        \       "/* Author: ". g:qt_cpp_author ." */",
+        \       "/* Author: ". g:elemc_author ." */",
         \       "/* ------------------------------------ */",
         \       "",
         \       "/* Name: (". s:classname . ")",
