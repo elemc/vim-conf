@@ -24,6 +24,8 @@ xmler.qrc
             documentpropertiesdialog.h
             mainwindow.cpp
             mainwindow.h
+            urldialog.cpp
+            urldialog.h
         }
         thread_classes=.{
             xmlerfileoperthread.cpp

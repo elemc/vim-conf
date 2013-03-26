@@ -1,7 +1,3 @@
-if exists('g:elemc_author')
-else
-    let g:elemc_author = "Alexei Panov <me@elemc.name>"
-endif
 let s:classname = ""
 let s:baseclass = ""
 let s:filename_cpp = ""
@@ -22,17 +18,12 @@ function! s:qt_new_class (classname, baseclass)
     let s:baseclass = a:baseclass
 
     " Part 1. Create CPP file
-    call s:qt_create_file ( s:filename_cpp )
+    call g:elemc_create_file ( s:filename_cpp )
     call s:qt_cpp_content ()
 
     " Part 2. Create header file
-    call s:qt_create_file ( s:filename_h )
+    call g:elemc_create_file ( s:filename_h )
     call s:qt_h_content ()
-endfunction
-
-function! s:qt_create_file ( filename )
-    execute ":new ". a:filename
-    execute ":buffer ". a:filename
 endfunction
 
 function! s:qt_append_include ( name, type )
@@ -93,12 +84,7 @@ endfunction
 function s:qt_header_comment (type)
     let f_str = "/* ------------------------------------ */"
     let mid_str = "/* C++ class ". a:type ." (" . s:baseclass . ")"
-    let space_count = len(f_str) - len(mid_str) - 2
-    
-    for i in range(1,space_count)
-        let mid_str = mid_str ." "
-    endfor
-    let mid_str = mid_str ."*/"
+    let mid_str = g:elemc_correct_header_string( mid_str, len(f_str), "*/")
 
     let cmnt = ["// -*- C++ -*-",
         \       f_str,
