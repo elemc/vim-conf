@@ -98,3 +98,142 @@ new-basketpwd=~/workspace/code/new-basketpwd CD=. {
         }
     }
 }
+basketpwd=~/workspace/code/basketpwd CD=. {
+    images=images/ {
+        icons=icons/ {
+            basketpwd.svg
+            basketpwd_128x128.png
+            basketpwd_192x192.png
+            basketpwd_256x256.png
+            basketpwd_32x32.png
+            basketpwd_36x36.png
+            basketpwd_48x48.png
+            basketpwd_64x64.png
+            basketpwd_72x72.png
+            basketpwd_96x96.png
+        }
+        addfolder.png
+        addrecord.png
+        basketpwd.icns
+        basketpwd.ico
+        changepassword.png
+        collapse.png
+        copy.png
+        delete.png
+        editrecord.png
+        exit.png
+        expand.png
+        folderclose.png
+        folderopen.png
+        newfile.png
+        openfile.png
+        prog.png
+        record.png
+        save.png
+        saveas.png
+        showpasswords.png
+        stock_task.png
+        temp.png
+    }
+    l10n=l10n/ {
+        basketpwd_en.qm
+        basketpwd_en.ts
+    }
+    libs=libs/ {
+        basketpwd=basketpwd/ {
+            basketbaseitem.cpp
+            basketbaseitem.h
+            basketpwd-libs_global.h
+            basketpwd.pro
+            basketpwdlibs.cpp
+            basketpwdlibs.h
+            basketutils.cpp
+            basketutils.h
+            coreplugin.cpp
+            coreplugin.h
+            plugin_share.h
+        }
+    }
+    model=model/ {
+        basketmodel.cpp
+        basketmodel.h
+    }
+    netsync=netsync/ {
+        firstnetworksender.cpp
+        firstnetworksender.h
+        qsyncclientlist.cpp
+        qsyncclientlist.h
+        syncclient.cpp
+        syncclient.h
+        udplistener.cpp
+        udplistener.h
+        udpnetworksocket.cpp
+        udpnetworksocket.h
+    }
+    src=src/ {
+        basketcommon.cpp
+        basketcommon.h
+        changepassword.cpp
+        changepassword.h
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+        pluginsloader.cpp
+        pluginsloader.h
+        settingsdialog.cpp
+        settingsdialog.h
+    }
+    tools=tools/ {
+        SlackBuild=SlackBuild/ {
+            README
+            basketpwd.SlackBuild
+            doinst.sh
+            slack-desc
+        }
+        cmake=cmake/ {
+            modules=modules/ {
+                FindLibGcrypt.cmake
+            }
+        }
+        mac_resource=mac_resource/ {
+            en.lproj=en.lproj/ {
+                InfoPlist.strings
+            }
+            ru.lproj=ru.lproj/ {
+                InfoPlist.strings
+            }
+            empty.lproj
+        }
+        nsis=nsis/ {
+            basketpwd-cp1251.nsi
+            basketpwd-utf8.nsi
+            basketpwd-winx64.nsi
+            basketpwd.nsi.in
+            make-setuper.sh
+        }
+        Info.plist
+        PkgInfo
+        basketpwd-ui-for-old-qt.patch
+        basketpwd.desktop
+        basketpwd.exe.manifest
+        basketpwd.spec
+        make-source-archive
+    }
+    ui=ui/ {
+        changepassword.ui
+        mainwindow.ui
+        settingsdialog.ui
+    }
+    CMakeLists.txt
+    ChangeLog.txt
+    README
+    aboutdialog.cpp
+    aboutdialog.h
+    aboutdialog.ui
+    basketpwd-gui.pro
+    basketpwd.pro
+    basketpwd.rc
+    config.h.in
+    icon-images.qrc
+    qt_ru.qm
+}

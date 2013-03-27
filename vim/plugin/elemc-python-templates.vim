@@ -1,19 +1,19 @@
 command! -nargs=1 ElemcPythonSingle call s:python_single(<f-args>)
 command! -nargs=* ElemcPythonClass call s:python_class(<f-args>)
 
-function! s:python_header_comment (type)
-    let f_str = "# ------------------------------------ #"
-    let mid_str = "# Python source ". a:type ." (". s:basename .")"
-    let mid_str = g:elemc_correct_header_string(mid_str, len(f_str), "#")
+function! s:python_header_comment (script_type)
+    let f_str = "\# ------------------------------------ #"
+    let mid_str = "\# Python source ". a:script_type ." (". s:basename .")"
+    let mid_str = g:elemc_correct_header_string(mid_str, len(f_str), "\#")
 
-    let cmnt = ["#!/usr/bin/env python",
-        \       "# -*- Python -*-",
-        \       "# -*- coding: utf-8 -*-",
+    let cmnt = ["\#!/usr/bin/env python",
+        \       "\# -*- Python -*-",
+        \       "\# -*- coding: utf-8 -*-",
         \       f_str,
         \       mid_str,
-        \       "# Author: ". g:elemc_author ." #",
-        \       "# ------------------------------------ #",
-        \       "# Description: ",
+        \       "\# Author: ". g:elemc_author ." #",
+        \       "\# ------------------------------------ #",
+        \       "\# Description: ",
         \       ""]
    return cmnt
 endfunction

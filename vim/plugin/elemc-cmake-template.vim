@@ -35,7 +35,7 @@ function! s:cmake_debug_section()
     return content
 endfunction
 
-function! s:cmake_variables_section( project_name )
+function! s:cmake_application_content( project_name )
     let content = [
         \       "set (PROJECT_NAME ". a:project_name .")",
         \       "set (PROJECT_VERSION 0.0.1)",
@@ -81,7 +81,7 @@ function! s:cmake_app(project_name)
    call g:elemc_create_file( "CMakeLists.txt" )
    call append (0, s:cmake_header("application", a:project_name))
    call append (line('$'), s:cmake_debug_section())
-   call append (line('$'), s:cmake_variables_section( a:project_name ))
+   call append (line('$'), s:cmake_application_content( a:project_name ))
    call g:elemc_create_file( "config.h.in" )
 endfunction
 
