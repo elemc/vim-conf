@@ -7,6 +7,7 @@ function! g:elemc_correct_header_string( str, count, comment_symbol )
     let space_count = a:count - len(a:str) - len(a:comment_symbol)
     if space_count < 0
         return a:str . " " . a:comment_symbol
+    endif
 
     let new_str = a:str
 

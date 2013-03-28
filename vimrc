@@ -111,3 +111,9 @@ set foldcolumn=1
 let spec_chglog_prepend = 1
 au FileType spec map <buffer> <F5> <Plug>AddChangelogEntry
 let spec_chglog_packager = 'Alexei Panov <me AT elemc DOT name>'
+
+" Some bindings
+nnoremap <silent> <m-t> :tabnew<CR>
+nnoremap <silent> <m-w> :tabclose<CR>
+nnoremap <silent> <m-}> :tabnext<CR>
+nnoremap <silent> <m-{> :tabprevious<CR>

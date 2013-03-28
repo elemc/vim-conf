@@ -178,6 +178,8 @@ basketpwd=~/workspace/code/basketpwd CD=. {
         main.cpp
         mainwindow.cpp
         mainwindow.h
+        passwordwidget.cpp
+        passwordwidget.h
         pluginsloader.cpp
         pluginsloader.h
         settingsdialog.cpp
