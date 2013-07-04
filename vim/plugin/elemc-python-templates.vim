@@ -7,8 +7,8 @@ function! s:python_header_comment (script_type)
     let mid_str = g:elemc_correct_header_string(mid_str, len(f_str), "\#")
 
     let cmnt = ["\#!/usr/bin/env python",
-        \       "\# -*- Python -*-",
         \       "\# -*- coding: utf-8 -*-",
+        \       "\# -*- Python -*-",
         \       f_str,
         \       mid_str,
         \       "\# Author: ". g:elemc_author ." #",
