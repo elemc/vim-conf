@@ -104,7 +104,7 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Folding
 set foldmethod=syntax
-set foldcolumn=1
+set foldcolumn=2
 
 " SPEC
 let spec_chglog_prepend = 1
