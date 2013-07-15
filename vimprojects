@@ -239,3 +239,8 @@ basketpwd=~/workspace/code/basketpwd CD=. {
     icon-images.qrc
     qt_ru.qm
 }
+foinstaller=~/workspace/code/foinstaller CD=. {
+    foinstaller.py
+    foinstaller-gui.py
+    setup.py
+}
