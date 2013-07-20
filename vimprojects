@@ -171,6 +171,8 @@ basketpwd=~/workspace/code/basketpwd CD=. {
         udpnetworksocket.h
     }
     src=src/ {
+        aboutdialog.cpp
+        aboutdialog.h
         basketcommon.cpp
         basketcommon.h
         changepassword.cpp
@@ -222,6 +224,7 @@ basketpwd=~/workspace/code/basketpwd CD=. {
         make-source-archive
     }
     ui=ui/ {
+        aboutdialog.ui
         changepassword.ui
         mainwindow.ui
         settingsdialog.ui
@@ -229,11 +232,9 @@ basketpwd=~/workspace/code/basketpwd CD=. {
     CMakeLists.txt
     ChangeLog.txt
     README
-    aboutdialog.cpp
-    aboutdialog.h
-    aboutdialog.ui
     basketpwd-gui.pro
     basketpwd.pro
+    basketpwd.qrc
     basketpwd.rc
     config.h.in
     icon-images.qrc
