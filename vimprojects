@@ -241,6 +241,7 @@ basketpwd=~/workspace/code/basketpwd CD=. {
     qt_ru.qm
 }
 foinstaller=~/workspace/code/foinstaller CD=. {
+    foinstaller.rb
     foinstaller.py
     foinstaller-gui.py
     setup.py
