@@ -14,6 +14,7 @@ Bundle 'cmake.vim'
 Bundle 'spec.vim'
 Bundle 'python.vim'
 Bundle 'Python-Syntax-Folding'
+Bundle 'Python-Syntax'
 
 filetype plugin indent on
 " Vundle END
@@ -144,3 +145,4 @@ nnoremap <silent> <m-{> :tabprevious<CR>
 " Python Mode
 let g:pymode_syntax=1
 let g:pymode_folding=1  " Enable python folding
+let python_highlight_all=1

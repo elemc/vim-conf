@@ -1138,6 +1138,7 @@ sip=~/workspace/code/sip CD=. {
             .keep
         }
         account-enabler.py
+        opensipsrecords.py
         sipcommon.py
         sumtime.py
         update-accounts.py
