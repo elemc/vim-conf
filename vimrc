@@ -1,3 +1,23 @@
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'OmniCppComplete'
+Bundle 'project.tar.gz'
+Bundle 'Tagbar'
+Bundle 'bufexplorer.zip'
+Bundle 'cmake.vim'
+Bundle 'spec.vim'
+Bundle 'python.vim'
+Bundle 'Python-Syntax-Folding'
+
+filetype plugin indent on
+" Vundle END
+
 syntax enable
 se nu
 set tabstop=4
@@ -120,3 +140,7 @@ nnoremap <silent> <m-t> :tabnew<CR>
 nnoremap <silent> <m-w> :tabclose<CR>
 nnoremap <silent> <m-}> :tabnext<CR>
 nnoremap <silent> <m-{> :tabprevious<CR>
+
+" Python Mode
+let g:pymode_syntax=1
+let g:pymode_folding=1  " Enable python folding
