@@ -15,6 +15,9 @@ Bundle 'spec.vim'
 Bundle 'python.vim'
 Bundle 'Python-Syntax-Folding'
 Bundle 'Python-Syntax'
+Bundle 'ruby.vim'
+Bundle 'rails.vim'
+
 
 filetype plugin indent on
 " Vundle END
