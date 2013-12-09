@@ -17,6 +17,7 @@ Bundle 'Python-Syntax-Folding'
 Bundle 'Python-Syntax'
 Bundle 'ruby.vim'
 Bundle 'rails.vim'
+Bundle 'EasyGrep'
 
 
 filetype plugin indent on
