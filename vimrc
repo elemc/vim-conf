@@ -150,3 +150,15 @@ nnoremap <silent> <m-{> :tabprevious<CR>
 let g:pymode_syntax=1
 let g:pymode_folding=1  " Enable python folding
 let python_highlight_all=1
+
+" Ruby Mode
+" This is specific to rails apps, but I will not bind it to a particular
+" filetype
+function! TwoSpace()
+    setlocal ts=2
+    setlocal sw=2
+endfunction
+au FileType ruby call TwoSpace()
+au FileType coffee call TwoSpace()
+au BufNewFile,BufRead *.erb call TwoSpace()
+au BufNewFile,BufRead *.rb call TwoSpace()
