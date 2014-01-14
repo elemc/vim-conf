@@ -146,6 +146,11 @@ nnoremap <silent> <m-w> :tabclose<CR>
 nnoremap <silent> <m-}> :tabnext<CR>
 nnoremap <silent> <m-{> :tabprevious<CR>
 
+inoremap <silent> <m-t> <ESC>:tabnew<CR>
+inoremap <silent> <m-w> <ESC>:tabclose<CR>
+inoremap <silent> <m-}> <ESC>:tabnext<CR>
+inoremap <silent> <m-{> <ESC>:tabprevious<CR>
+
 " Python Mode
 let g:pymode_syntax=1
 let g:pymode_folding=1  " Enable python folding
