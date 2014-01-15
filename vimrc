@@ -7,7 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'OmniCppComplete'
-Bundle 'project.tar.gz'
+" Bundle 'project.tar.gz'
 Bundle 'Tagbar'
 Bundle 'bufexplorer.zip'
 Bundle 'cmake.vim'
@@ -18,7 +18,7 @@ Bundle 'Python-Syntax'
 Bundle 'ruby.vim'
 Bundle 'rails.vim'
 Bundle 'EasyGrep'
-
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 " Vundle END
@@ -131,7 +131,8 @@ endif
 colorscheme desert
 
 " Project support
-map <silent> <c-p> <Plug>ToggleProject
+" map <silent> <c-p> <Plug>ToggleProject
+map <C-p> :NERDTreeToggle ~/workspace/code<CR>
 
 " Tagbar
 nnoremap <silent> <F9> :TagbarToggle<CR>
