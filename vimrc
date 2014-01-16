@@ -19,6 +19,7 @@ Bundle 'ruby.vim'
 Bundle 'rails.vim'
 Bundle 'EasyGrep'
 Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 " Vundle END
@@ -173,3 +174,6 @@ au FileType ruby call TwoSpace()
 au FileType coffee call TwoSpace()
 au BufNewFile,BufRead *.erb call TwoSpace()
 au BufNewFile,BufRead *.rb call TwoSpace()
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
