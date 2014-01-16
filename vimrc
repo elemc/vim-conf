@@ -20,6 +20,7 @@ Bundle 'rails.vim'
 Bundle 'EasyGrep'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
+" Bundle 'jistr/vim-nerdtree-tabs'
 
 filetype plugin indent on
 " Vundle END
@@ -133,7 +134,7 @@ colorscheme desert
 
 " Project support
 " map <silent> <c-p> <Plug>ToggleProject
-map <C-p> :NERDTreeToggle ~/workspace/code<CR>
+map <C-p> :NERDTreeToggle<CR>
 
 " Tagbar
 nnoremap <silent> <F9> :TagbarToggle<CR>
@@ -175,5 +176,3 @@ au FileType coffee call TwoSpace()
 au BufNewFile,BufRead *.erb call TwoSpace()
 au BufNewFile,BufRead *.rb call TwoSpace()
 
-" airline
-let g:airline#extensions#tabline#enabled = 1
