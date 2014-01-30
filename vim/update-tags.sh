@@ -3,6 +3,7 @@
 OS_TYPE=$(uname)
 CTAGS_BIN=$(which ctags)
 QT4_INCLUDES=/usr/include
+WT_INCLUDES=/usr/include/Wt
 
 if [ ! -x $CTAGS_BIN ]; then
     CTAGS_BIN=ctags
@@ -24,4 +25,5 @@ fi
 
 $CTAGS_BIN -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f cpp cpp_src
 $CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt4 $QT4_INCLUDES
+$CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt4 $WT_INCLUDES
 popd
