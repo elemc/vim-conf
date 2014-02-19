@@ -50,7 +50,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags/cpp
-" set tags+=~/.vim/tags/gl
+set tags+=~/.vim/tags/wt
 " set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
 
@@ -158,6 +158,11 @@ inoremap <silent> <m-t> <ESC>:tabnew<CR>
 inoremap <silent> <m-w> <ESC>:tabclose<CR>
 inoremap <silent> <m-}> <ESC>:tabnext<CR>
 inoremap <silent> <m-{> <ESC>:tabprevious<CR>
+
+vnoremap <silent> <m-t> <ESC>:tabnew<CR>
+vnoremap <silent> <m-w> <ESC>:tabclose<CR>
+vnoremap <silent> <m-}> <ESC>:tabnext<CR>
+vnoremap <silent> <m-{> <ESC>:tabprevious<CR>
 
 " Python Mode
 let g:pymode_syntax=1

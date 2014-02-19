@@ -25,5 +25,5 @@ fi
 
 $CTAGS_BIN -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f cpp cpp_src
 $CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt4 $QT4_INCLUDES
-$CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt4 $WT_INCLUDES
+$CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f wt $WT_INCLUDES
 popd
