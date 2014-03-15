@@ -20,7 +20,6 @@ Bundle 'rails.vim'
 Bundle 'EasyGrep'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
-" Bundle 'jistr/vim-nerdtree-tabs'
 
 filetype plugin indent on
 " Vundle END
@@ -176,3 +175,7 @@ au FileType coffee call TwoSpace()
 au BufNewFile,BufRead *.erb call TwoSpace()
 au BufNewFile,BufRead *.rb call TwoSpace()
 
+" Perl support
+let perl_include_pod = 1
+let perl_fold = 1
+let perl_fold_blocks = 1
