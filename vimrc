@@ -20,6 +20,7 @@ Bundle 'rails.vim'
 Bundle 'EasyGrep'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
 " Vundle END
@@ -184,3 +185,7 @@ au BufNewFile,BufRead *.rb call TwoSpace()
 let perl_include_pod = 1
 let perl_fold = 1
 let perl_fold_blocks = 1
+
+" Go support
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+autocmd FileType go compiler go
