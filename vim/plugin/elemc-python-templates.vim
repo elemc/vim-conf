@@ -4,7 +4,7 @@ command! -nargs=* ElemcPythonClass call s:python_class(<f-args>)
 function! s:python_header_comment (script_type)
     let f_str = "\# ------------------------------------ #"
     let mid_str = "\# Python source ". a:script_type ." (". s:basename .")"
-    let mid_str = g:elemc_correct_header_string(mid_str, len(f_str), "\#")
+    let mid_str = g:Elemc_correct_header_string(mid_str, len(f_str), "\#")
 
     let cmnt = ["\#!/usr/bin/env python",
         \       "\# -*- coding: utf-8 -*-",
@@ -64,7 +64,7 @@ endfunction
 function! s:python_single (sourcename)
     let s:basename = a:sourcename
 
-    call g:elemc_create_file ( a:sourcename )
+    call g:Elemc_create_file ( a:sourcename )
     call append (0, s:python_header_comment("single"))
     call append (line('$'), s:python_single_import())
     call append (line('$'), s:python_single_content())
@@ -77,7 +77,7 @@ function! s:python_class (classname, baseclass)
     let s:filename_py = filename_part . ".py"
     let s:basename = a:baseclass
 
-    call g:elemc_create_file ( s:filename_py )
+    call g:Elemc_create_file ( s:filename_py )
     call append (0, s:python_header_comment("class"))
     call append (line('$'), s:python_class_import(import_name, a:baseclass))
     call append (line('$'), s:python_class_content(a:classname, a:baseclass))

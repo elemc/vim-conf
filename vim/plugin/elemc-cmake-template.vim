@@ -7,8 +7,8 @@ function! s:cmake_header(type, basename)
     let mid_str = "# CMake ". a:type .""
     let mid2_str= "# Project ". a:basename .""
     
-    let mid_str = g:elemc_correct_header_string(mid_str, len(f_str), "#")
-    let mid2_str = g:elemc_correct_header_string(mid2_str, len(f_str), "#")
+    let mid_str = g:Elemc_correct_header_string(mid_str, len(f_str), "#")
+    let mid2_str = g:Elemc_correct_header_string(mid2_str, len(f_str), "#")
 
     let cmnt = ["# -*- CMake -*-",
         \       f_str,
@@ -78,11 +78,11 @@ function! s:cmake_application_content( project_name )
 endfunction
 
 function! s:cmake_app(project_name)
-   call g:elemc_create_file( "CMakeLists.txt" )
+   call g:Elemc_create_file( "CMakeLists.txt" )
    call append (0, s:cmake_header("application", a:project_name))
    call append (line('$'), s:cmake_debug_section())
    call append (line('$'), s:cmake_application_content( a:project_name ))
-   call g:elemc_create_file( "config.h.in" )
+   call g:Elemc_create_file( "config.h.in" )
 endfunction
 
 

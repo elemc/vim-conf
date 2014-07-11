@@ -18,11 +18,11 @@ function! s:qt_new_class (classname, baseclass)
     let s:baseclass = a:baseclass
 
     " Part 1. Create CPP file
-    call g:elemc_create_file ( s:filename_cpp )
+    call g:Elemc_create_file ( s:filename_cpp )
     call s:qt_cpp_content ()
 
     " Part 2. Create header file
-    call g:elemc_create_file ( s:filename_h )
+    call g:Elemc_create_file ( s:filename_h )
     call s:qt_h_content ()
 endfunction
 
@@ -84,7 +84,7 @@ endfunction
 function s:qt_header_comment (type)
     let f_str = "/* ------------------------------------ */"
     let mid_str = "/* C++ class ". a:type ." (" . s:baseclass . ")"
-    let mid_str = g:elemc_correct_header_string( mid_str, len(f_str), "*/")
+    let mid_str = g:Elemc_correct_header_string( mid_str, len(f_str), "*/")
 
     let cmnt = ["// -*- C++ -*-",
         \       f_str,
