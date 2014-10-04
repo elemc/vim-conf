@@ -1,10 +1,10 @@
 " Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'OmniCppComplete'
 " Plugin 'project.tar.gz'
