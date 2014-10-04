@@ -152,17 +152,17 @@ au FileType spec map <buffer> <F5> <Plug>AddChangelogEntry
 let spec_chglog_packager = 'Alexei Panov <me AT elemc DOT name>'
 
 " Some bindings
-nnoremap <silent> <m-t> :tabnew<CR>
+nnoremap <silent> <m-t> :999tabnew<CR>
 nnoremap <silent> <m-w> :tabclose<CR>
 nnoremap <silent> <m-}> :tabnext<CR>
 nnoremap <silent> <m-{> :tabprevious<CR>
 
-inoremap <silent> <m-t> <ESC>:tabnew<CR>
+inoremap <silent> <m-t> <ESC>:999tabnew<CR>
 inoremap <silent> <m-w> <ESC>:tabclose<CR>
 inoremap <silent> <m-}> <ESC>:tabnext<CR>
 inoremap <silent> <m-{> <ESC>:tabprevious<CR>
 
-vnoremap <silent> <m-t> <ESC>:tabnew<CR>
+vnoremap <silent> <m-t> <ESC>:999tabnew<CR>
 vnoremap <silent> <m-w> <ESC>:tabclose<CR>
 vnoremap <silent> <m-}> <ESC>:tabnext<CR>
 vnoremap <silent> <m-{> <ESC>:tabprevious<CR>
