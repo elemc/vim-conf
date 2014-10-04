@@ -1,26 +1,28 @@
 " Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'OmniCppComplete'
-" Bundle 'project.tar.gz'
-Bundle 'Tagbar'
-Bundle 'bufexplorer.zip'
-Bundle 'cmake.vim'
-Bundle 'spec.vim'
-Bundle 'python.vim'
-Bundle 'Python-Syntax-Folding'
-Bundle 'Python-Syntax'
-Bundle 'ruby.vim'
-Bundle 'rails.vim'
-Bundle 'EasyGrep'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'jnwhiteh/vim-golang'
+Plugin 'gmarik/Vundle'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'OmniCppComplete'
+" Plugin 'project.tar.gz'
+Plugin 'Tagbar'
+Plugin 'bufexplorer.zip'
+Plugin 'cmake.vim'
+Plugin 'spec.vim'
+Plugin 'python.vim'
+Plugin 'Python-Syntax-Folding'
+Plugin 'Python-Syntax'
+Plugin 'ruby.vim'
+Plugin 'rails.vim'
+Plugin 'EasyGrep'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'jnwhiteh/vim-golang'
+
+call vundle#end()
 
 filetype plugin indent on
 " Vundle END
