@@ -3,6 +3,7 @@
 OS_TYPE=$(uname)
 CTAGS_BIN=$(which ctags)
 QT4_INCLUDES=/usr/include
+QT5_INCLUDES=/usr/include
 WT_INCLUDES=/usr/include/Wt
 
 if [ ! -x $CTAGS_BIN ]; then
@@ -10,7 +11,8 @@ if [ ! -x $CTAGS_BIN ]; then
 fi
 if [ "$OS_TYPE" == "Darwin" ]; then
     CTAGS_BIN=/usr/local/bin/ctags
-    QT4_INCLUDES=/Users/alex/tools/qt/4.8.3/include
+    QT4_INCLUDES=/usr/local/Cellar/qt/4.8.6/include
+    QT5_INCLUDES=/usr/local/Cellar/qt5/5.3.2/include/
 fi
 
 if [ ! -d tags ]; then
@@ -25,5 +27,6 @@ fi
 
 $CTAGS_BIN -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f cpp cpp_src
 $CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt4 $QT4_INCLUDES
+$CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt5 $QT5_INCLUDES
 $CTAGS_BIN -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f wt $WT_INCLUDES
 popd
