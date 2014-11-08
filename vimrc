@@ -81,6 +81,7 @@ if has ("unix")
         endif
     else
         set guioptions-=T
+        set guioptions-=m
         set guitablabel=%t%m
 
         map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
