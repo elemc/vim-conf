@@ -6,7 +6,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'OmniCppComplete'
+" Plugin 'OmniCppComplete'
 " Plugin 'project.tar.gz'
 Plugin 'Tagbar'
 Plugin 'bufexplorer.zip'
@@ -196,3 +196,7 @@ let perl_fold_blocks = 1
 " Go support
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd FileType go compiler go
+
+" YouComplete
+" let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_extra_conf_globlist = 0
