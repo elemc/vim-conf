@@ -21,6 +21,7 @@ Plugin 'EasyGrep'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
@@ -44,7 +45,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#CompleteCpp
+autocmd FileType c set omnifunc=ccomplete#CompleteCPP
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
