@@ -199,4 +199,4 @@ autocmd FileType go compiler go
 
 " YouComplete
 " let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_extra_conf_globlist = 0
+" let g:ycm_extra_conf_globlist = 0
