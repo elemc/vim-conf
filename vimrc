@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 " Plugin 'OmniCppComplete'
 " Plugin 'project.tar.gz'
 Plugin 'Tagbar'
@@ -200,3 +200,9 @@ autocmd FileType go compiler go
 " YouComplete
 " let g:ycm_add_preview_to_completeopt = 1
 " let g:ycm_extra_conf_globlist = 0
+let g:ycm_add_preview_to_completeopt = 1
+
+" Python Jedi
+let g:jedi#popup_select_first = 0
+let g:jedi#auto_vim_configuration = 1
+au FileType python setlocal completeopt-=preview " The reason to deactivate jedi#auto_vim_configuration
