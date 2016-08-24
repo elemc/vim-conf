@@ -22,6 +22,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/neocomplete'
+Plugin 'Konfekt/FastFold'
 
 call vundle#end()
 
@@ -206,3 +209,6 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:jedi#popup_select_first = 0
 let g:jedi#auto_vim_configuration = 1
 au FileType python setlocal completeopt-=preview " The reason to deactivate jedi#auto_vim_configuration
+
+let g:neocomplete#enable_at_startup = 1
+" let g:go_bin_path = expand("~/workspace/go/bin")
