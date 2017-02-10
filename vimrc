@@ -191,16 +191,8 @@ autocmd FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>ds <Plug>(go-def-split)
 au FileType go nmap <leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>i <Plug>(go-info)
 let g:go_fmt_command = "goimports"
-
-" YouComplete
-" let g:ycm_add_preview_to_completeopt = 1
-" let g:ycm_extra_conf_globlist = 0
-let g:ycm_add_preview_to_completeopt = 1
-
-" Python Jedi
-let g:jedi#popup_select_first = 0
-let g:jedi#auto_vim_configuration = 1
-au FileType python setlocal completeopt-=preview " The reason to deactivate jedi#auto_vim_configuration
+autocmd VimEnter * GoPath /home/alex/workspace/go
 
 let g:neocomplete#enable_at_startup = 1
