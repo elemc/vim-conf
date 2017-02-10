@@ -5,7 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Tagbar'
+" Plugin 'Tagbar'
+Plugin 'majutsushi/tagbar'
 Plugin 'bufexplorer.zip'
 Plugin 'cmake.vim'
 Plugin 'spec.vim'
