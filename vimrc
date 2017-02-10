@@ -5,9 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'OmniCppComplete'
-" Plugin 'project.tar.gz'
 Plugin 'Tagbar'
 Plugin 'bufexplorer.zip'
 Plugin 'cmake.vim'
@@ -20,8 +17,6 @@ Plugin 'rails.vim'
 Plugin 'EasyGrep'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete'
 Plugin 'Konfekt/FastFold'
@@ -61,17 +56,6 @@ set tags+=~/.vim/tags/wt
 set tags+=~/.vim/tags/qt4
 
 " build tags of your own project with Ctrl-F12
-
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
@@ -126,8 +110,8 @@ endif
 
 " keys
 if has ("gui_running")
-    if has ("gui_gtk2")
-        set guifont=Monaco\ 10
+    if has ("gui_gtk2") || has("gui_gtk3")
+        set guifont=Monaco\ 8
         behave mswin
     endif
     if has("gui_macvim")
@@ -140,7 +124,11 @@ if has ("gui_running")
 endif
 
 " color and theme
-colorscheme desert
+" colorscheme desert
+colorscheme molokai
+" let g:molokai_original = 1
+" let g:rehash256 = 1
+
 
 " Project support
 " map <silent> <c-p> <Plug>ToggleProject
@@ -159,20 +147,19 @@ au FileType spec map <buffer> <F5> <Plug>AddChangelogEntry
 let spec_chglog_packager = 'Alexei Panov <me AT elemc DOT name>'
 
 " Some bindings
-nnoremap <silent> <m-t> :999tabnew<CR>
+nnoremap <silent> <m-t> :tabnew<CR>
 nnoremap <silent> <m-w> :tabclose<CR>
 nnoremap <silent> <m-}> :tabnext<CR>
 nnoremap <silent> <m-{> :tabprevious<CR>
 
-inoremap <silent> <m-t> <ESC>:999tabnew<CR>
+inoremap <silent> <m-t> <ESC>:tabnew<CR>
 inoremap <silent> <m-w> <ESC>:tabclose<CR>
 inoremap <silent> <m-}> <ESC>:tabnext<CR>
 inoremap <silent> <m-{> <ESC>:tabprevious<CR>
 
-vnoremap <silent> <m-t> <ESC>:999tabnew<CR>
+vnoremap <silent> <m-t> <ESC>:tabnew<CR>
 vnoremap <silent> <m-w> <ESC>:tabclose<CR>
 vnoremap <silent> <m-}> <ESC>:tabnext<CR>
-vnoremap <silent> <m-{> <ESC>:tabprevious<CR>
 
 " Python Mode
 let g:pymode_syntax=1
@@ -197,8 +184,8 @@ let perl_fold = 1
 let perl_fold_blocks = 1
 
 " Go support
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd FileType go compiler go
+autocmd Syntax go normal zR
 
 " YouComplete
 " let g:ycm_add_preview_to_completeopt = 1
@@ -211,4 +198,3 @@ let g:jedi#auto_vim_configuration = 1
 au FileType python setlocal completeopt-=preview " The reason to deactivate jedi#auto_vim_configuration
 
 let g:neocomplete#enable_at_startup = 1
-" let g:go_bin_path = expand("~/workspace/go/bin")
