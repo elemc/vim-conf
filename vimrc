@@ -21,6 +21,9 @@ Plugin 'bling/vim-airline'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete'
 Plugin 'Konfekt/FastFold'
+Plugin 'davidhalter/jedi-vim'
+" Plugin 'mitsuhiko/vim-jinja'
+Plugin 'mitsuhiko/vim-python-combined'
 
 call vundle#end()
 
