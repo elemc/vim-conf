@@ -18,6 +18,7 @@ Plugin 'rails.vim'
 Plugin 'EasyGrep'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete'
 Plugin 'Konfekt/FastFold'
@@ -201,3 +202,5 @@ let g:go_auto_type_info = 1
 autocmd VimEnter * GoPath /home/alex/workspace/go
 
 let g:neocomplete#enable_at_startup = 1
+
+let g:airline_theme='molokai'
