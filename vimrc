@@ -25,6 +25,7 @@ Plugin 'Konfekt/FastFold'
 Plugin 'davidhalter/jedi-vim'
 " Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mitsuhiko/vim-python-combined'
+Plugin 'fisadev/FixedTaskList.vim'
 
 call vundle#end()
 
@@ -134,6 +135,11 @@ colorscheme molokai
 " let g:molokai_original = 1
 " let g:rehash256 = 1
 
+" set airline theme
+let g:airline_theme='molokai'
+
+" set key for TaskList
+map <F2> :TaskList<CR>
 
 " Project support
 " map <silent> <c-p> <Plug>ToggleProject
@@ -203,4 +209,4 @@ autocmd VimEnter * GoPath /home/alex/workspace/go
 
 let g:neocomplete#enable_at_startup = 1
 
-let g:airline_theme='molokai'
+
