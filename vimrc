@@ -117,7 +117,7 @@ endif
 " keys
 if has ("gui_running")
     if has ("gui_gtk2") || has("gui_gtk3")
-        set guifont=Monaco\ 8
+        set guifont=Monaco\ 9
         behave mswin
     endif
     if has("gui_macvim")

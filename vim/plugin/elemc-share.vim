@@ -23,3 +23,8 @@ function! g:Elemc_create_file( filename )
     execute ":new ". a:filename
     execute ":buffer ". a:filename
 endfunction
+
+function! g:Elemc_vcreate_file( filename )
+    execute ":vnew ". a:filename
+    execute ":buffer ". a:filename
+endfunction
