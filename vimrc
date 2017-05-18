@@ -196,16 +196,17 @@ let perl_fold_blocks = 1
 
 " Go support
 autocmd FileType go compiler go
-autocmd Syntax go normal zR
+""" autocmd Syntax go normal zR
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>ds <Plug>(go-def-split)
 au FileType go nmap <leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <leader>dt <Plug>(go-def-tab)
 au FileType go nmap <leader>i <Plug>(go-info)
-let g:go_fmt_command = "goimports"
+" let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 autocmd VimEnter * GoPath /home/alex/workspace/go
+let g:go_fmt_experimental = 1
 
 let g:neocomplete#enable_at_startup = 1
 
